@@ -1,0 +1,32 @@
+<h1>User Profile for
+  {{ user?.profile.first_name || 'Unknown Name' }}
+  {{ user?.profile.last_name || '' }}
+</h1>
+
+<div id="profile-container" class="row">
+	<div class="position{{ user?.profile.website?.url ? ' col-md-5' : ''}}">
+
+    	<!-- Website Screenshot -->
+      <div *ngIf="user?.profile.website?.url" class="panel panel-default">
+        <div class="panel-heading">
+          <span class="fa fa-external-link" aria-hidden="true"></span>
+          <a href="{{ user?.profile.website.url }}" target="_blank">{{ user?.profile.website.url ]}</a>
+        </div>
+        <div *ngIf="user?.profile.website.thumbshot" class="full-profile panel-body">
+          <a href="{{ user?.profile.website.url }}" target="_blank"><span style="background-image: {{ $user?.profile.website.thumbshot }}"></span></a>
+        </div>
+        <div *ngIf="! user?.profile.website.thumbshot" class="empty-profile panel-body bg-danger">
+          <span class="fa fa-image" aria-hidden="true"></span>
+          <p class="lead">Screenshot Coming Soon</p>
+        </div>
+
+        <!-- Avatar -->
+        <a routerLink="/profile/view"><img src="{{ user?.picture ? user?.picture : '//:0' }}" alt="Profile Picture" class="img-circle img-thumbnail has-thumbshot"></a>
+      </div>
+
+      <div *ngIf="! user?.profile.websites.url">
+        <!-- Avatar -->
+        <a routerLink="/profile/view"><img src="{{ user?.picture ? user?.picture : '//:0' }}" alt="Profile Picture" class="img-circle img-thumbnail"></a>
+      </div>
+  </div>
+</div>
