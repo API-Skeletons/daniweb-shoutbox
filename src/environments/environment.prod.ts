@@ -14,7 +14,7 @@ export const environment = {
 export const authConfig: AuthConfig = {
   oidc: false,
   loginUrl: 'https://www.daniweb.com/connect/oauth/auth',
-  redirectUri: 'http://localhost:4200/login',
+  redirectUri: 'https://api-skeletons.github.io/daniweb-shoutbox',
   clientId: '1c',
   scope: 'profile_read conversations_read conversations_write groups_read groups_write',
   responseType: 'token',

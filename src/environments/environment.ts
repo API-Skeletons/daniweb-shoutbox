@@ -14,8 +14,8 @@ export const environment = {
 export const authConfig: AuthConfig = {
   oidc: false,
   loginUrl: 'https://www.daniweb.com/connect/oauth/auth',
-  redirectUri: 'https://apiskeletons1.ngrok.io/login',
-//  redirectUri: 'http://localhost:4200/login',
+//  redirectUri: 'https://apiskeletons1.ngrok.io/login',
+  redirectUri: 'http://localhost:4200/login',
   clientId: '1c',
   scope: 'profile_read conversations_read conversations_write groups_read groups_write',
   responseType: 'token',
