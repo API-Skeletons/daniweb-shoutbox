@@ -1,4 +1,16 @@
-# Dazah
+# daniweb.com Shoutbox
+
+This is a client-side only application which creates a shoutbox which any authenticated daniweb user can post to.
+
+# See this in action!
+
+https://api-skeletons.github.io/daniweb-shoutbox
+
+
+To set this up yourself you'll need to manually create a new group then assign that group number to your environment.
+
+
+
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 10.0.1.
 
