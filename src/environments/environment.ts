@@ -7,15 +7,17 @@ import { AuthConfig, LoginOptions } from 'angular-oauth2-oidc';
 export const environment = {
   production: false,
   apiUrl: 'https://www.daniweb.com/connect/api/v4',
+  groupId: 76,
+  refresh: 20,
 };
 
 export const authConfig: AuthConfig = {
   oidc: false,
   loginUrl: 'https://www.daniweb.com/connect/oauth/auth',
-//  redirectUri: 'https://apiskeletons1.ngrok.io/login',
-  redirectUri: 'http://localhost:4200/login',
+  redirectUri: 'https://apiskeletons1.ngrok.io/login',
+//  redirectUri: 'http://localhost:4200/login',
   clientId: '1c',
-  scope: 'profile_read conversations_read conversations_write',
+  scope: 'profile_read conversations_read conversations_write groups_read groups_write',
   responseType: 'token',
   showDebugInformation: true
 };

@@ -9,6 +9,7 @@ import { DefaultLayoutComponent } from './layout/default-layout/default-layout.c
 import { DataModule } from '@module/data/data.module';
 import { LoginComponent } from './component/login/login.component';
 import { NgbDropdownModule, NgbModule, NgbNavModule } from '@ng-bootstrap/ng-bootstrap';
+import { ShoutboxModule } from '@module/shoutbox/shoutbox.module';
 
 @NgModule({
   declarations: [
@@ -28,6 +29,7 @@ import { NgbDropdownModule, NgbModule, NgbNavModule } from '@ng-bootstrap/ng-boo
       }
     }),
     DataModule,
+    ShoutboxModule,
     NgbModule,
     NgbDropdownModule,
     NgbNavModule

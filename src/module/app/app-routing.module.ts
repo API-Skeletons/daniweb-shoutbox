@@ -8,12 +8,12 @@ import { DefaultLayoutComponent } from './layout/default-layout/default-layout.c
 const routes: Routes = [
   {
     path: '',
-    redirectTo: '/profile/view',
+    redirectTo: '/shoutbox',
     pathMatch: 'full'
   },
   {
     path: 'login',
-    redirectTo: '/profile/view',
+    redirectTo: '/shoutbox',
     pathMatch: 'full'
   },
   {
@@ -21,6 +21,12 @@ const routes: Routes = [
     component: DefaultLayoutComponent,
       loadChildren: () =>
         import('../user/user.module').then(m => m.UserModule)
+  },
+  {
+    path: 'shoutbox',
+    component: DefaultLayoutComponent,
+      loadChildren: () =>
+        import('../shoutbox/shoutbox.module').then(m => m.ShoutboxModule)
   },
   {
     path: 'profile',
